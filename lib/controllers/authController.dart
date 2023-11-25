@@ -13,6 +13,8 @@ class AuthController extends GetxController {
 
   late Rx<User?> _user;
 
+  User? get user => _user.value;
+
   _setInitialScreen(User? user) {
     if (user == null)
       Get.offAll(() => LoginScreen());
