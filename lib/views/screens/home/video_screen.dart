@@ -22,7 +22,7 @@ class VideoScreen extends StatelessWidget {
             child: Container(
               width: 50,
               height: 50,
-              padding: EdgeInsets.all(1),
+              padding: const EdgeInsets.all(1),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(25),
@@ -50,9 +50,9 @@ class VideoScreen extends StatelessWidget {
           Container(
             height: 50,
             width: 50,
-            padding: EdgeInsets.all(11),
+            padding: const EdgeInsets.all(11),
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
+              gradient: const LinearGradient(colors: [
                 Colors.grey,
                 Colors.white,
               ]),
@@ -90,7 +90,7 @@ class VideoScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 100,
                     ),
                     Expanded(
@@ -100,7 +100,8 @@ class VideoScreen extends StatelessWidget {
                       children: [
                         Expanded(
                           child: Container(
-                            padding: EdgeInsets.only(left: 20, bottom: 20),
+                            padding:
+                                const EdgeInsets.only(left: 20, bottom: 20),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -108,7 +109,7 @@ class VideoScreen extends StatelessWidget {
                               children: [
                                 Text(
                                   data.username,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 20,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -116,21 +117,21 @@ class VideoScreen extends StatelessWidget {
                                 ),
                                 Text(
                                   data.caption,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 15,
                                     color: Colors.white,
                                   ),
                                 ),
                                 Row(
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.music_note,
                                       size: 15,
                                       color: Colors.white,
                                     ),
                                     Text(
                                       data.songName,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontSize: 15,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -163,12 +164,12 @@ class VideoScreen extends StatelessWidget {
                                       size: 40,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 7,
                                   ),
                                   Text(
                                     data.likes.length.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 20,
                                       color: Colors.white,
                                     ),
@@ -180,18 +181,18 @@ class VideoScreen extends StatelessWidget {
                                   InkWell(
                                     onTap: () =>
                                         Get.to(CommentScreen(id: data.id)),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.comment,
                                       color: Colors.white,
                                       size: 40,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 7,
                                   ),
                                   Text(
                                     data.commentCount.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 20,
                                       color: Colors.white,
                                     ),
@@ -202,18 +203,18 @@ class VideoScreen extends StatelessWidget {
                                 children: [
                                   InkWell(
                                     onTap: () {},
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.reply,
                                       color: Colors.white,
                                       size: 40,
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 7,
                                   ),
                                   Text(
                                     data.shareCount.toString(),
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 20,
                                       color: Colors.white,
                                     ),

@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         currentIndex: pageIdx,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,

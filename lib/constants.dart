@@ -12,8 +12,8 @@ import 'package:tiktok_clone/views/screens/home/video_Screen.dart';
 var pages = [
   VideoScreen(),
   SearchScreen(),
-  AddVideoScreen(),
-  Text('Message Screen'),
+  const AddVideoScreen(),
+  const Text('Message Screen'),
   ProfileScreen(id: authController.user!.uid),
 ];
 

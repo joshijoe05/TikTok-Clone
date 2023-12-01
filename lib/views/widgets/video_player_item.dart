@@ -15,7 +15,7 @@ class VideoPlayerItem extends StatefulWidget {
 
 class _VideoPlayerItemState extends State<VideoPlayerItem> {
   late VideoPlayerController videoplayerController;
-  VideoController videoController = Get.find();
+  VideoController videoController = Get.put(VideoController());
 
   @override
   void initState() {
@@ -35,7 +35,7 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
     return Container(
       width: size.width,
       height: size.height,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: backgroundColor,
       ),
       child: GestureDetector(

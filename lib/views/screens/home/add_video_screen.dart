@@ -28,11 +28,11 @@ class AddVideoScreen extends StatelessWidget {
         children: [
           SimpleDialogOption(
             onPressed: () => pickVideo(ImageSource.gallery),
-            child: Row(
+            child: const Row(
               children: [
                 Icon(Icons.image),
                 Padding(
-                  padding: const EdgeInsets.all(7.0),
+                  padding: EdgeInsets.all(7.0),
                   child: Text(
                     'Gallery',
                     style: TextStyle(
@@ -45,11 +45,11 @@ class AddVideoScreen extends StatelessWidget {
           ),
           SimpleDialogOption(
             onPressed: () => pickVideo(ImageSource.camera),
-            child: Row(
+            child: const Row(
               children: [
                 Icon(Icons.camera_alt),
                 Padding(
-                  padding: const EdgeInsets.all(7.0),
+                  padding: EdgeInsets.all(7.0),
                   child: Text(
                     'Camera',
                     style: TextStyle(
@@ -62,11 +62,11 @@ class AddVideoScreen extends StatelessWidget {
           ),
           SimpleDialogOption(
             onPressed: () => Get.back(),
-            child: Row(
+            child: const Row(
               children: [
                 Icon(Icons.cancel),
                 Padding(
-                  padding: const EdgeInsets.all(7.0),
+                  padding: EdgeInsets.all(7.0),
                   child: Text(
                     'Cancel',
                     style: TextStyle(
@@ -92,7 +92,7 @@ class AddVideoScreen extends StatelessWidget {
             width: 190,
             height: 50,
             color: buttonColor,
-            child: Center(
+            child: const Center(
               child: Text(
                 'Add Video',
                 style: TextStyle(

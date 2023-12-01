@@ -21,13 +21,13 @@ class TextInputField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         prefixIcon: Icon(icon),
-        labelStyle: TextStyle(fontSize: 20),
+        labelStyle: const TextStyle(fontSize: 20),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),
-            borderSide: BorderSide(color: borderColor)),
+            borderSide: const BorderSide(color: borderColor)),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(5),
-            borderSide: BorderSide(color: borderColor)),
+            borderSide: const BorderSide(color: borderColor)),
       ),
       obscureText: isObscure,
     );

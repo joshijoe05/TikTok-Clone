@@ -16,10 +16,11 @@ class AuthController extends GetxController {
   User? get user => _user.value;
 
   _setInitialScreen(User? user) {
-    if (user == null)
+    if (user == null) {
       Get.offAll(() => LoginScreen());
-    else
+    } else {
       Get.offAll(() => HomeScreen());
+    }
   }
 
   @override
@@ -101,5 +102,9 @@ class AuthController extends GetxController {
     } catch (e) {
       Get.snackbar('Error Logging in', 'Please check your credentials');
     }
+  }
+
+  signOut() async {
+    await firebaseAuth.signOut();
   }
 }

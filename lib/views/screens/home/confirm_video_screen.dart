@@ -18,10 +18,10 @@ class ConfirmVideoScreen extends StatefulWidget {
 
 class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
   late VideoPlayerController controller;
-  TextEditingController _songController = TextEditingController();
-  TextEditingController _captionController = TextEditingController();
+  final TextEditingController _songController = TextEditingController();
+  final TextEditingController _captionController = TextEditingController();
 
-  UploadVideoController _uploadVideoController =
+  final UploadVideoController _uploadVideoController =
       Get.put(UploadVideoController());
 
   @override
@@ -44,7 +44,7 @@ class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             SizedBox(
@@ -52,7 +52,7 @@ class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
               width: MediaQuery.sizeOf(context).width,
               child: VideoPlayer(controller),
             ),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             SingleChildScrollView(
@@ -61,25 +61,25 @@ class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
                     width: MediaQuery.sizeOf(context).width - 20,
                     child: TextInputField(
                         controller: _songController,
                         icon: Icons.music_note,
                         labelText: 'Song Name'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    margin: const EdgeInsets.symmetric(horizontal: 10),
                     width: MediaQuery.sizeOf(context).width - 20,
                     child: TextInputField(
                         controller: _captionController,
                         icon: Icons.closed_caption,
                         labelText: 'Caption'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   ElevatedButton(
@@ -88,7 +88,7 @@ class _ConfirmVideoScreenState extends State<ConfirmVideoScreen> {
                       _captionController.text,
                       widget.videoUrl,
                     ),
-                    child: Text(
+                    child: const Text(
                       'Share !',
                       style: TextStyle(
                         fontSize: 20,

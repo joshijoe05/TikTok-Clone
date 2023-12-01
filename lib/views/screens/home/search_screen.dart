@@ -16,7 +16,7 @@ class SearchScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: buttonColor,
           title: TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               prefixIcon: Icon(
                 Icons.search,
                 color: Colors.white,
@@ -32,7 +32,7 @@ class SearchScreen extends StatelessWidget {
           ),
         ),
         body: searchController.searchedUsers.isEmpty
-            ? Center(
+            ? const Center(
                 child: Text(
                   'Search Someone You Know',
                   style: TextStyle(
@@ -53,7 +53,7 @@ class SearchScreen extends StatelessWidget {
                     ),
                     title: Text(
                       user.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 14,
                       ),

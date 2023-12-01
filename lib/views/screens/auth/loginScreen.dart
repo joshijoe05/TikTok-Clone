@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Login',
               style: TextStyle(
                 fontSize: 25,
@@ -41,7 +41,7 @@ class LoginScreen extends StatelessWidget {
               height: 25,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _emailController,
                 icon: Icons.email,
@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
               height: 15,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _passwordController,
                 icon: Icons.lock,
@@ -71,9 +71,10 @@ class LoginScreen extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
-                  print('login');
+                  authController.loginUser(
+                      _emailController.text, _passwordController.text);
                 },
-                child: Center(
+                child: const Center(
                     child: Text(
                   'Login',
                   style: TextStyle(
@@ -89,7 +90,7 @@ class LoginScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Don\'t have an Account ? ',
                   style: TextStyle(
                     fontSize: 20,

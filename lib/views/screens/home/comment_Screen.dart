@@ -43,12 +43,12 @@ class CommentScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w700,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Text(
                               comment.comment,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 20,
                                 color: Colors.white,
                                 fontWeight: FontWeight.w500,
@@ -60,17 +60,17 @@ class CommentScreen extends StatelessWidget {
                           children: [
                             Text(
                               tago.format(comment.datePublished.toDate()),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.white,
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 10,
                             ),
                             Text(
                               "${comment.likes.length} likes",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 12,
                                 color: Colors.white,
                               ),
@@ -97,13 +97,13 @@ class CommentScreen extends StatelessWidget {
               ListTile(
                 title: TextFormField(
                   controller: _commentController,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                   ),
                   decoration: InputDecoration(
                     labelText: 'Comment',
-                    labelStyle: TextStyle(
+                    labelStyle: const TextStyle(
                       fontSize: 20,
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
@@ -119,7 +119,7 @@ class CommentScreen extends StatelessWidget {
                     commentController.postComment(_commentController.text);
                     _commentController.text = "";
                   },
-                  child: Text(
+                  child: const Text(
                     'Send',
                     style: TextStyle(
                       fontSize: 16,

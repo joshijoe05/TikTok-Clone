@@ -17,7 +17,7 @@ class _CircleAnimationState extends State<CircleAnimation>
     super.initState();
     controller = AnimationController(
       vsync: this,
-      duration: Duration(
+      duration: const Duration(
         milliseconds: 5000,
       ),
     );

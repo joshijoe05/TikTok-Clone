@@ -8,7 +8,7 @@ import 'package:tiktok_clone/views/screens/auth/loginScreen.dart';
 import 'package:tiktok_clone/views/widgets/text_field.dart';
 
 class SignUpScreen extends StatefulWidget {
-  SignUpScreen({super.key});
+  const SignUpScreen({super.key});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -43,7 +43,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             const SizedBox(
               height: 10,
             ),
-            Text(
+            const Text(
               'Register',
               style: TextStyle(
                 fontSize: 25,
@@ -58,7 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 CircleAvatar(
                   radius: 64,
                   backgroundImage: pickedImage == null
-                      ? NetworkImage(
+                      ? const NetworkImage(
                           'https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png')
                       : FileImage(authController.profilePhoto!.absolute)
                           as ImageProvider,
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         pickedImage = await authController.pickImage();
                         setState(() {});
                       },
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.add_a_photo,
                       ),
                     ))
@@ -81,7 +81,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 25,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _usernameController,
                 icon: Icons.person,
@@ -92,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 15,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _emailController,
                 icon: Icons.email,
@@ -103,7 +103,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               height: 15,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: TextInputField(
                 controller: _passwordController,
                 icon: Icons.lock,
@@ -127,7 +127,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     _emailController.text,
                     _passwordController.text,
                     authController.profilePhoto),
-                child: Center(
+                child: const Center(
                     child: Text(
                   'Register',
                   style: TextStyle(
@@ -143,7 +143,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Already have an Account ? ',
                   style: TextStyle(
                     fontSize: 20,

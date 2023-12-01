@@ -4,7 +4,7 @@ import 'package:tiktok_clone/constants.dart';
 import 'package:tiktok_clone/models/user.dart';
 
 class SearchUserController extends GetxController {
-  Rx<List<User>> _searchedUsers = Rx<List<User>>([]);
+  final Rx<List<User>> _searchedUsers = Rx<List<User>>([]);
   List<User> get searchedUsers => _searchedUsers.value;
 
   void searchUser(String searchedName) async {
